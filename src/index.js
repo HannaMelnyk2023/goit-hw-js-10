@@ -1,9 +1,5 @@
-// live_ONbKV4NVOaPRb31Nncmw8MrSJaxrtb3B8CqBEH8TaOH4ZqkShFJz03wJbuBMNXH5
-// import axios from "axios";
-
-// axios.defaults.headers.common["x-api-key"] = "live_ONbKV4NVOaPRb31Nncmw8MrSJaxrtb3B8CqBEH8TaOH4ZqkShFJz03wJbuBMNXH5";
 import { fetchBreeds } from "./cat-api";
-const select = document.querySelector('.breed-selector');
+const select = document.querySelector('.breed-select');
 const loader = document.querySelector('.loader');
 const error = document.querySelector('.error');
 // start

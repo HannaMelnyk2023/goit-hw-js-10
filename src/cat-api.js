@@ -7,6 +7,4 @@ export function fetchBreeds() {
         .get('https://api.thecatapi.com/v1/breeds')
         .then(response => response.data);
 };
-// axios.get("https://api.thecatapi.com/v1/breeds")
-//     .then(res => console.log(res.data))
-//     .catch(err => console.error("ERROR".err));
+
