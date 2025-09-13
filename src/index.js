@@ -2,10 +2,10 @@ import { fetchBreeds, fetchCatByBreeds } from './cat-api';
 const select = document.querySelector('.breed-select');
 const loader = document.querySelector('.loader');
 const error = document.querySelector('.error');
-// start
+const catInfo = document.querySelector('.cat-info');
+
 select.style.display = 'none';
 error.style.display = 'none';
-// show loader
 loader.style.display = 'block';
 
 fetchBreeds()
@@ -20,7 +20,7 @@ fetchBreeds()
         loader.style.display = 'none';
     });
 
-// вибір породи
+
 select.addEventListener('change', () => {
     const breedId = select.value;
     loader.style.display = 'block';
