@@ -1,9 +1,15 @@
 import Notiflix from 'notiflix';
+import SlimSelect from 'slim-select';
+import 'slim-select/dist/slimselect.css';
+
 import { fetchBreeds, fetchCatByBreeds } from './cat-api';
+
+
 const select = document.querySelector('.breed-select');
 const loader = document.querySelector('.loader');
-const error = document.querySelector('.error');
 const catInfo = document.querySelector('.cat-info');
+// const error = document.querySelector('.error');
+
 
 function showLoader() {
     loader.style.display = "block";
@@ -29,6 +35,10 @@ fetchBreeds()
         select.innerHTML = breeds
             .map(breed => `<option value="${breed.id}">${breed.name}</option>`)
             .join('');
+        new SlimSelect({
+            select: '.breed-select',
+            placeholder: 'Choose a breed...'
+        });
         select.style.display = 'block';
     })
     .catch(() => {
