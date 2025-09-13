@@ -1,3 +1,4 @@
+import Notiflix from 'notiflix';
 import { fetchBreeds, fetchCatByBreeds } from './cat-api';
 const select = document.querySelector('.breed-select');
 const loader = document.querySelector('.loader');
@@ -10,16 +11,16 @@ function showLoader() {
 function hideLoader() {
     loader.style.display = "none";
 }
-function showError() {
-    error.style.display = "block";
-}
-function hideError() {
-    error.style.display = "none";
-}
+// function showError() {
+//     error.style.display = "block";
+// }
+// function hideError() {
+//     error.style.display = "none";
+// }
 
 select.style.display = 'none';
 catInfo.style.display = 'none'
-hideError();
+// hideError();
 showLoader();
 
 
@@ -31,7 +32,7 @@ fetchBreeds()
         select.style.display = 'block';
     })
     .catch(() => {
-        showError();
+        Notiflix.Notify.failure('Oops! Something went wrong! Try reloading the page!');
     })
     .finally(() => {
         hideLoader();
@@ -42,7 +43,7 @@ select.addEventListener('change', () => {
     const breedId = select.value;
 
     showLoader();
-    hideError()
+    // hideError()
     catInfo.style.display = 'none';
 
 
@@ -59,7 +60,7 @@ select.addEventListener('change', () => {
             catInfo.style.display = "block";
         })
         .catch(() => {
-            showError();
+            Notiflix.Notify.failure('Oops! Something went wrong! Try reloading the page!');
         })
         .finally(() => {
             hideLoader();
