@@ -11,7 +11,7 @@ loader.style.display = "block";
 fetchBreeds()
     .then(breeds => {
         select.innerHTML = breeds
-            .map(breeds => '<option value="${breed.id}">$breed.name}</option>')
+            .map(breed => `<option value="${breed.id}">${breed.name}</option>`)
             .join("");
         select.style.display = "block";
     })
