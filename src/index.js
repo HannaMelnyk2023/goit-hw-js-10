@@ -37,7 +37,6 @@ fetchBreeds()
             .join('');
         new SlimSelect({
             select: '.breed-select',
-            placeholder: 'Choose a breed...'
         });
         select.style.display = 'block';
     })
