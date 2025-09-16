@@ -24,7 +24,7 @@ function hideLoader() {
 //     error.style.display = "none";
 // }
 
-// select.style.display = 'none';
+select.style.display = 'none';
 catInfo.style.display = 'none'
 // hideError();
 showLoader();
