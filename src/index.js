@@ -35,10 +35,11 @@ fetchBreeds()
         select.innerHTML = breeds
             .map(breed => `<option value="${breed.id}">${breed.name}</option>`)
             .join('');
+        select.style.display = 'block';
         new SlimSelect({
             select: '.breed-select',
         });
-        select.style.display = 'block';
+
     })
     .catch(() => {
         Notiflix.Notify.failure('Oops! Something went wrong! Try reloading the page!');
