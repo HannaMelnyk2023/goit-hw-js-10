@@ -40,6 +40,7 @@ fetchBreeds()
             select: '.breed-select',
         });
 
+
     })
     .catch(() => {
         Notiflix.Notify.failure('Oops! Something went wrong! Try reloading the page!');

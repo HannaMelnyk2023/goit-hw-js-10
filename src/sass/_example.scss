@@ -57,11 +57,17 @@
 
 /* Додаткове мінімальне оформлення */
 .breed-select {
-  width: 300px;
+  // width: 300px; потрібне додаткове стилізування:
+  max-width: 300px;
   padding: 5px 10px;
   margin: 20px auto;
   display: block;
   font-size: 16px;
+}
+// додаткове стилізування
+.ss-list {
+  max-height: 200px;
+  overflow-y: auto;
 }
 
 .cat-info {
